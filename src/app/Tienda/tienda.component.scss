@@ -1,0 +1,18 @@
+.tienda {
+    width: 1100px;
+    border: solid 1px red;
+    box-sizing: border-box;
+    padding: 10px;
+
+    &__filtros {
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: inherit;
+        margin-bottom: 10px;
+    }
+
+    &__tabla {
+        width: 100%;
+        box-sizing: inherit;
+    }
+}

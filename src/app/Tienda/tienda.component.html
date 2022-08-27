@@ -1,0 +1,14 @@
+<section class="tienda">
+    <div 
+        class="tienda__filtros"
+        *ngIf="categorias$ | async as categorias">
+        <tabla-filtro 
+            [data]="categorias">
+        </tabla-filtro>
+    </div>
+    <div 
+        class="tienda__tabla"
+        *ngIf="productos$ | async as productos">
+        <tabla-contenido></tabla-contenido>
+    </div>
+</section>

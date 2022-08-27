@@ -1,0 +1,26 @@
+<select name="" id="" (change)="onSelectCategoria($event.target)">
+    <option value="all">Todas</option>
+    <option 
+        *ngFor="let categoria of categorias$ | async" 
+        [value]="categoria.id">
+        {{ categoria.nombre }}
+    </option>
+</select>
+<div
+    *ngIf="productos$ | async as productos"
+    class="tabla">
+    <div class="header">
+        <div>Nombre</div>
+        <div>Precio</div>
+        <div>Stock</div>
+        <div>Categoria</div>
+    </div>
+    <div 
+        class="body"
+        *ngFor="let producto of productos">
+        <div>{{ producto.name ?? 'No Data' }}</div>
+        <div>{{ producto.precio ?? 'No Data' }}</div>
+        <div>{{ producto.stock ?? 'No Data' }}</div>
+        <div>{{ producto.categoriaNombre ?? 'No Data' }}</div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<section 
+    *ngIf="data"
+    class="categorias">
+    <select 
+        name="categorias-select"
+        id="categorias-select">
+        <option value="0">All Products</option>
+        <option 
+            *ngFor="let categoria of data" 
+            [value]="categoria?.id">
+            {{ categoria?.name }}
+        </option>
+    </select>
+    <label for="categorias-select">Selecciona una categoria</label>
+</section>

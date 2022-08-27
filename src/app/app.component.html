@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+
+<div 
+  *ngIf="false"
+  style="display: none;"
+  >
+  <div *ngIf="cursos$ | async as cursos">
+    <div *ngFor="let curso of cursos;">
+      <div>{{ curso?.lenguaje }}</div>
+      <div>{{ curso?.calificacion }}</div>
+      <div>{{ curso?.level }}</div>
+      <div>{{ curso?.profesor }}</div>
+      <div>________________________________________________________</div>
+    </div>
+  </div>
+  
+  <div *ngIf="productos$ | async as productos">
+    <div *ngFor="let producto of productos">
+      <div>Producto nombre: {{ producto.nombre }}</div>
+      <div>Producto nombre: {{ producto.iva }}</div>
+      <div>Producto nombre: {{ producto.categoria }}</div>
+    </div>
+  </div>
+  
+  <button (click)="knowData()">Data Show</button>
+</div>
+
+<productos-component style="display: none;"></productos-component>
+<tienda></tienda>
